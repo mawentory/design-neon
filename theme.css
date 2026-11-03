@@ -1,0 +1,104 @@
+/*
+ * Neon — Magenta and cyan on night.
+ *
+ * The complete token set. Every rule in design.css reads from these names,
+ * so this file is the whole visual identity: change a value here and the
+ * entire gallery follows.
+ *
+ * The second block below holds derived accessibility values. Each one is
+ * the designer's colour pushed toward the opposite end of the ramp until it
+ * clears its WCAG minimum against every surface it can land on -- page,
+ * sheet, and the tinted fills of badges and diff lines. They are generated
+ * and checked, not hand-picked; see build/verify.py in the design tooling.
+ */
+
+[data-theme="neon"] {
+  --paper: #0b0620;
+  --paper-2: #120a2e;
+  --sheet: #170d3a;
+  --ink: #f4ecff;
+  --ink-2: #b79fe0;
+  --ink-3: #8a76bc;
+  --rule: #33215c;
+  --signal: #ff3ea5;
+  --signal-soft: #ffb3dc;
+  --signal-hover: #ff6cc0;
+  --ink-hover: #ffffff;
+  --add: #4be3b0;
+  --del: #ff5f7e;
+  --board: #07031a;
+  --board-deep: #04010f;
+  --board-2: #1b1046;
+  --board-rule: #3a2472;
+  --board-text: #f4ecff;
+  --board-dim: #9c86d6;
+  --ok-board: #5ce8bd;
+  --err-board: #ff7d97;
+  --code-str: #ffd479;
+  --code-add-bg: color-mix(in srgb, #4be3b0 16%, transparent);
+  --code-add-fg: #7ff0cb;
+  --code-del-bg: color-mix(in srgb, #ff5f7e 16%, transparent);
+  --code-del-fg: #ff9bae;
+  --code-del-text: #c98aa0;
+  --line-openai: #22d3ee;
+  --line-anthropic: #ff3ea5;
+  --line-google: #4be3b0;
+  --line-mistral: #a855f7;
+  --line-deepseek: #facc15;
+  --font: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", monospace;
+  --display: var(--font);
+  --display-weight: 700;
+  --display-tracking: -0.02em;
+  --display-tracking-lg: -0.025em;
+  --display-tracking-tight: -0.03em;
+  --display-transform: none;
+  --btn-weight: 600;
+  --btn-tracking: 0.02em;
+  --btn-transform: none;
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+  --bw: 1px;
+  --rule-w: 1px;
+  --bw-heavy: 2px;
+  --rule-style: solid;
+  --shadow-card: 0 0 0 1px color-mix(in srgb, var(--signal) 35%, transparent), 0 0 40px -14px var(--signal);
+  --shadow-btn: 0 0 20px -8px var(--signal);
+  --shadow-btn-hover: 0 0 28px -6px var(--signal);
+  --shadow-panel: 0 0 60px -30px var(--accent-2);
+  --btn-hover-transform: translateY(-1px);
+  --panel-blur: none;
+  --section-y: clamp(72px, 10vw, 128px);
+  --size-base: 1.0625rem;
+  --texture: radial-gradient(60% 45% at 10% 0%, color-mix(in srgb, var(--signal) 26%, transparent), transparent 70%), radial-gradient(55% 45% at 92% 14%, color-mix(in srgb, var(--accent-2) 22%, transparent), transparent 70%);
+  --texture-size: 100% 100%, 100% 100%;
+  --texture-position: 0 0, 0 0;
+  --texture-repeat: no-repeat, no-repeat;
+  --texture-attachment: fixed, fixed;
+  --accent-2: #22d3ee;
+  --accent-3: #a855f7;
+
+  /* Derived for contrast; see the note above. */
+  --add-text: #4be3b0;
+  --board-add-text: #7ff0cb;
+  --board-code-text: #ffd479;
+  --board-del-text: #c98aa0;
+  --board-dim-text: #9c86d6;
+  --board-key-text: #ffd479;
+  --del-text: #ff5f7e;
+  --focus-ring: #ff3ea5;
+  --ink-3-text: #8a76bc;
+  --on-ink-muted: #74639f;
+  --on-signal: #0a0a0a;
+  --signal-soft-text: #0a0a0a;
+  --signal-text: #ff3ea5;
+
+  color-scheme: dark;
+}
+
+/* ---------- Identity rules that are not tokens ---------- */
+[data-theme="neon"] .brand svg circle {
+  fill: var(--accent-2);
+}
